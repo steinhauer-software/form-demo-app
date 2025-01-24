@@ -1,14 +1,10 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <form action='https://webhosterei.com/form-demo.php' method='post'>
+      <form action={import.meta.env.VITE_FORM_ACTION} method='post'>
         <div>
           <label htmlFor='name'>Name:</label>
           <input type='text' id='name' name='name' />
